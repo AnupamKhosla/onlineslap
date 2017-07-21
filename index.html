@@ -1,0 +1,428 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Online Slap</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="shortcut icon" type="image/png" href="favicon.ico" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link rel="stylesheet" href="css/main.css">
+    <!--[if lt IE 9]>
+            <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <header>
+        <nav class="pm-blue" role="navigation">
+            <div class="nav-wrapper container2 clearfix-after">
+                <a href="#" data-activates="slide-out" class="button-collapse">
+                    <i class="material-icons">menu</i>
+                </a>
+                <a id="logo-container" href="#" class="brand-logo">
+                    <img src="img/text_logo_white.svg" alt="Logo">
+                </a>
+                <ul class="right ">
+                    <li class="search-bar">
+                        <div class="search-wrapper card">
+                            <input id="search" placeholder="Find People">
+                            <i class="material-icons search">search</i>
+                            <i class="material-icons close">close</i>
+                            <div class="search-results"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="material-icons">person_add</i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="material-icons">notifications</i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="material-icons">help</i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="exit" href="#">
+                            <i class="material-icons">exit_to_app</i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <ul id="slide-out" class="side-nav fixed">
+            <li>
+                <div class="user-view">
+                    <div class="row user-row">
+                        <div class="col s7">
+                            <a class="user-pic" href="#">
+                                <img class="circle z-depth-1" src="img/User.jpg">
+                            </a>
+                            <div class="status"></div>
+                        </div>
+                        <div class="col s5 slap-info">
+                            <div class="row ">
+                                <div class="col s8">
+                                    <img class="slaps given" src="img/anger_slap.gif" alt="anger slap">
+                                    <img class="slaps received" src="img/slap-in-the-face.gif" alt="slap in the face">
+                                </div>
+                                <div class="col s4">
+                                    <div class="count give">
+                                        123
+                                    </div>
+                                    <div class="count rec">
+                                        4.5k
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row names">
+                        <div class="col s12 user-info">
+                            <a href="#"><span class="name">Anupam Khosla</span></a>
+                            <a href="#"><span class="occupation">Front End Developer at Facbook pvt ltd.</span></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </header>
+    <main>
+        <div class="container container2">
+            <div class="row">
+                <div class="col posts l7">
+                    <div class="card add-post white">
+                        <a class="btn-floating btn-large"><i class="material-icons">edit</i></a>
+                        <div class="card-content clearfix-after">
+                            <form action="">
+                                <div class="input-field">
+                                    <input id="post_title" type="text" class="validate">
+                                    <label for="post_title">Title</label>
+                                </div>
+                                <div class="input-field ">
+                                    <textarea id="post_text_area" class="materialize-textarea"></textarea>
+                                    <label for="post_text_area">Body</label>
+                                </div>
+                                <div class="file-field input-field">
+                                    <i class="material-icons">image</i>
+                                    <input type="file">
+                                    <!-- commented out - - used to show uploaded image name
+                                    <div class="file-path-wrapper">
+                                        <input class="file-path validate" type="text">
+                                    </div>
+                                    -->
+                                </div>
+                                <div class="emoticon">
+                                    <i class="material-icons">insert_emoticon</i>
+                                </div>
+                                <div class="submit">
+                                    <button class="btn waves-effect waves-light" type="submit" name="action">
+                                        Submit
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="card white post">
+                        <div class="card-content clearfix-after">
+                            <div class="col poster-pic">
+                                <img src="img/user6.jpg" alt="poseter profile pic" class="circle responsive-img">
+                            </div>
+                            <div class="col poster-info">
+                                <div class="poster-name">
+                                    <a href="#" class="name">
+                                            Bill Gates
+                                        </a>
+                                    <i class="material-icons">more_vert</i>
+                                    <i class="material-icons">star_border</i>
+                                </div>
+                                <div class="occupation">Co-founder at Crazzy Egg and Hello Bar</div>
+                                <div class="post-time">7 days ago</div>
+                            </div>
+                            <div class="col post-content">
+                                <blockquote>
+                                    This is an example quotation that uses the blockquote tag.This is an example quotation that uses the blockquote tag.This is an example quotation that uses the blockquote tag.
+                                </blockquote>
+
+								<img src="img/sample.png" alt="" class="responsive-img">
+
+                                <p>
+                                    Cards are a convenient means of displaying content composed of different types of objects. They’re also well-suited for presenting similar objects whose size or supported actions can vary considerably, like photos with captions of variable length.
+                                </p>
+                                <p>
+                                    I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.
+                                </p>
+                            </div>
+                            <div class="col slaps">
+                                <div class="anger valign-wrapper">
+                                    <img src="img/anger_slap.gif" alt=""> 13
+                                </div>
+                                <div class="single valign-wrapper">
+                                    <img src="img/slap-in-the-face.gif" alt=""> 5
+                                </div>
+                                <div class="sweet valign-wrapper">
+                                    <img src="img/smiley-slapping.gif" alt=""> 123
+                                </div>
+                                <div class="total-shares valign-wrapper">8 Shares</div>
+                            </div>
+                            <div class="col card-action">
+                                <hr>
+                                <a class='dropdown-button btn-flat slap carot' href='#' data-activates='slap_dropdown' data-belowOrigin="true" data-constrainWidth="false"><i class="material-icons left">pan_tool</i>Slap</a>
+                                <!-- Dropdown Structure -->
+                                <ul id='slap_dropdown' class='dropdown-content'>
+                                    <li>
+                                        <a class="hard valign-wrapper" href="#!"><img src="img/anger_slap.gif" alt="">
+												<span>Give hard slap</span>
+                                        	</a>
+                                    </li>
+                                    <li>
+                                        <a class="single valign-wrapper" href="#!"><img src="img/slap-in-the-face.gif" alt="">
+                                        	 	<span>Give normal slap</span>
+                                        	 </a>
+                                    </li>
+                                    <li>
+                                        <a class="sweet valign-wrapper" href="#!"><img src="img/smiley-slapping.gif" alt="">
+                                        	 	<span>Give sweet slap</span>
+                                        	</a>
+                                    </li>
+                                </ul>
+                                <a class="waves-effect btn-flat"><i class="material-icons left">comment</i>Comment</a>
+                                <a class="waves-effect btn-flat"><i class="material-icons left">share</i>Share</a>
+                            </div>
+                        </div>
+                        <div class="comments-container clearfix-after">
+                            <div class="col s12 comments-info valign-wrapper">
+                                <a class='dropdown-button most-recent carot' href='#' data-activates='comments-filter' data-belowOrigin="true" data-constrainWidth="false">Most Recent</a>
+                                <!-- Dropdown Structure -->
+                                <ul id='comments-filter' class='dropdown-content'>
+                                    <li><a href="#!">Most Recent</a></li>
+                                    <li><a href="#!">Most liked</a></li>
+                                    <li><a href="#!">Oldest</a></li>
+                                </ul>
+                                <span class="total-comments">2134 Comments</span>
+                            </div>
+                            <div class="comments col s12">
+                                <!-- first comment starts -->
+                                <div class="row single-comment">
+                                    <div class="col poster-pic">
+                                        <img src="img/user6.jpg" alt="poseter profile pic" class="circle responsive-img">
+                                    </div>
+                                    <div class="col poster-info">
+                                        <a href="#" class="poster-name">
+                                            Bill Gates
+                                        </a> We are honored to have special Guest Sarah Clatterbuck share her Developer Story; from generating “random” numbers in middle school to studying applied design in college and then directing the Presentation Infrastructure teams at LinkedIn. She also works with high school CS classes and sits on the board of the Girl Scouts of Northern California in order to help develop girls’ early interest in STEM fields.
+                                        <div class="row actions">
+                                            <div class="col s12 valign-wrapper">
+                                                <a href="">Like</a>
+                                                <a href="#" class="">Reply</a>
+                                                <a href="#" class="valign-wrapper"><i class="material-icons">thumb_up</i>3</a>
+                                                <span class="ago">7 days ago</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- first comment finishes -->
+                                <!-- second comment starts -->
+                                <div class="row single-comment">
+                                    <div class="col poster-pic">
+                                        <img src="img/user2.jpg" alt="poseter profile pic" class="circle responsive-img">
+                                    </div>
+                                    <div class="col poster-info">
+                                        <a href="#" class="poster-name">
+                                            Bill Gates
+                                        </a> We are honored to have special Guest Sarah Clatterbuck share her Developer Story; from generating “random” numbers in middle school to studying applied design in college and then directing the Presentation Infrastructure teams at LinkedIn. She also works with high school CS classes and sits on the board of the Girl Scouts of Northern California in order to help develop girls’ early interest in STEM fields.
+                                        <div class="row actions">
+                                            <div class="col s12 valign-wrapper">
+                                                <a href="">Like</a>
+                                                <a href="#" class="">Reply</a>
+                                                <a href="#" class="valign-wrapper"><i class="material-icons">thumb_up</i>3</a>
+                                                <a href="#" class="valign-wrapper"><i class="material-icons icon-flipped">reply</i>2 replies</a>
+                                                <span class="ago">7 days ago</span>
+                                            </div>
+                                        </div>
+                                        <!-- inner replies start (same html for reply as that of comment itself)-->
+                                        <div class="row single-comment">
+                                            <div class="col poster-pic">
+                                                <img src="img/user3.jpg" alt="poseter profile pic" class="circle responsive-img">
+                                            </div>
+                                            <div class="col poster-info">
+                                                <a href="#" class="poster-name">
+		                                            Bill Gates
+		                                        </a> We are honored to have special Guest Sarah Clatterbuck share her Developer Story; from generating “random” numbers in middle school to studying applied design in college and then directing the Presentation Infrastructure teams at LinkedIn. She also works with high school CS classes and sits on the board of the Girl Scouts of Northern California in order to help develop girls’ early interest in STEM fields.
+                                                <div class="row actions">
+                                                    <div class="col s12 valign-wrapper">
+                                                        <a href="">Like</a>
+                                                        <a href="#" class="">Reply</a>
+                                                        <a href="#" class="valign-wrapper"><i class="material-icons">thumb_up</i>11</a>
+                                                        <span class="ago">1 hr ago</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row single-comment">
+                                            <div class="col poster-pic">
+                                                <img src="img/user4.jpg" alt="poseter profile pic" class="circle responsive-img">
+                                            </div>
+                                            <div class="col poster-info">
+                                                <a href="#" class="poster-name">
+		                                            Bill Gates
+		                                        </a> We are honored to have special Guest Sarah Clatterbuck share her Developer Story; from generating “random” numbers in middle school to studying applied design in college and then directing the Presentation Infrastructure teams at LinkedIn. She also works with high school CS classes and sits on the board of the Girl Scouts of Northern California in order to help develop girls’ early interest in STEM fields.
+                                                <div class="row actions">
+                                                    <div class="col s12 valign-wrapper">
+                                                        <a href="">Like</a>
+                                                        <a href="#" class="">Reply</a>
+                                                        <a href="#" class="valign-wrapper"><i class="material-icons">thumb_up</i>11</a>
+                                                        <span class="ago">1 hr ago</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- user reply -->
+                                        <div class="row single-comment valign-wrapper">
+                                            <div class="col poster-pic">
+                                                <img src="img/User.jpg" alt="poseter profile pic" class="circle responsive-img">
+                                            </div>
+                                            <div class="col poster-info">
+                                                <div class="search-wrapper white">
+                                                    <input class="comment-form" placeholder="Find People">
+                                                    <i class="material-icons image">image</i>
+                                                    <i class="material-icons emoticon">insert_emoticon</i>
+                                                    <i class="material-icons send">send</i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- inner replies end -->
+                                    </div>
+                                </div>
+                                <!-- second comment finishes -->
+                                <!-- third comment starts -->
+                                <div class="row single-comment">
+                                    <div class="col poster-pic">
+                                        <img src="img/user6.jpg" alt="poseter profile pic" class="circle responsive-img">
+                                    </div>
+                                    <div class="col poster-info">
+                                        <a href="#" class="poster-name">
+                                            Bill Gates
+                                        </a> We are honored to have special Guest Sarah Clatterbuck share her Developer Story; from generating “random” numbers in middle school to studying applied design in college and then directing the Presentation Infrastructure teams at LinkedIn. She also works with high school CS classes and sits on the board of the Girl Scouts of Northern California in order to help develop girls’ early interest in STEM fields.
+                                        <div class="row actions">
+                                            <div class="col s12 valign-wrapper">
+                                                <a href="">Like</a>
+                                                <a href="#" class="">Reply</a>
+                                                <a href="#" class="valign-wrapper"><i class="material-icons">thumb_up</i>3</a>
+                                                <span class="ago">7 days ago</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- third comment finishes -->
+                                <!-- user reply -->
+                                <div class="row single-comment valign-wrapper">
+                                    <div class="col poster-pic">
+                                        <img src="img/User.jpg" alt="poseter profile pic" class="circle responsive-img">
+                                    </div>
+                                    <div class="col poster-info">
+                                        <div class="search-wrapper white">
+                                            <input class="comment-form" placeholder="Find People">
+                                            <i class="material-icons image">image</i>
+                                            <i class="material-icons emoticon">insert_emoticon</i>
+                                            <i class="material-icons send">send</i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- user reply ends -->
+                            </div>
+                            <!-- all comments end -->
+                            <div class="col s12 extra-comments">
+                                <span class="more-comments">Load more comments</span>
+                                <span class="seen-comments">8/2134</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col l5 xl3 recent-posts">
+                    <div class="card white post">
+                        <div class="card-content">Ad</div>
+                    </div>
+                    <div class="card white post">
+                        <div class="card-content">
+                            <span class="card-title">Recent Hot Slaps</span>
+                            <div class="recent-post">
+                                <a href="#">Bill Gates died of Heart attack in Hospital</a>
+                            </div>
+                            <div class="recent-post">
+                                <a href="" class="recent-post">India's Mithali is top run-getter in women ODIs</a>
+                            </div>
+                            <div class="recent-post">
+                                <a href="" class="recent-post">Stop trolling my husband in the middle of India-West Indies series, says Umesh Yadav’s T</a>
+                            </div>
+                            <div class="recent-post">
+                                <a href="#">Bill Gates died of Heart attack in Hospital</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card white post">
+                        <div class="card-content">Ad</div>
+                    </div>
+                    <div class="card white post">
+                        <div class="card-content">
+                            <span class="card-title">Interesting Slaps</span>
+                            <div class="recent-post">
+                                <a href="#">Bill Gates died of Heart attack in Hospital</a>
+                            </div>
+                            <div class="recent-post">
+                                <a href="" class="recent-post">India's Mithali is top run-getter in women ODIs</a>
+                            </div>
+                            <div class="recent-post">
+                                <a href="" class="recent-post">Stop trolliddle of India-West Indies series, says Umesh Yadav’s wife 8 JUL 2017, 2118 HRS IST</a>
+                            </div>
+                            <div class="recent-post">
+                                <a href="#">Bill Gates died of Heart attack in Hospital</a>
+                            </div>
+                        </div>
+                    </div>
+                    <footer>
+                        <div class="links">
+                            <a href="#">Policy</a>
+                            <span>|</span>
+                            <a href="#">Privacy</a>
+                            <span>|</span>
+                            <a href="#">About Us</a>
+                            <span>|</span>
+                            <a href="#">Cookies</a>
+                        </div>
+                        <p class="copyright center-align">
+                            Copyright © All rights reserved, 2017
+                        </p>
+                    </footer>
+                </div>
+                <div class="col l12 xl2 advertisement">
+                    <img src="img/google_adv.png" alt="google skyscrapper advertisement">
+                </div>
+            </div>
+        </div>
+    </main>
+    <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="js/materialize.js"></script>
+    <!-- Customized materialize js, don't use cdn or other version -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "onlineslap",
+  "version": "1.0.0",
+  "description": "Online slap website",
+  "main": "index.js",
+  "dependencies": {
+   
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Anupam Khosla",
+  "license": "ISC"
+}
